@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 13, 2022 12:13:04 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="pojo.TblOrder" table="tbl_order" catalog="bincang_senja" optimistic-lock="version">
+        <id name="noOrder" type="java.lang.Integer">
+            <column name="no_order" />
+            <generator class="identity" />
+        </id>
+        <property name="namaMenu" type="string">
+            <column name="nama_menu" length="50" not-null="true" />
+        </property>
+        <property name="jumlahOrder" type="string">
+            <column name="jumlah_order" length="100" not-null="true" />
+        </property>
+        <property name="harga" type="string">
+            <column name="harga" length="15" not-null="true" />
+        </property>
+        <property name="total" type="string">
+            <column name="total" length="30" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

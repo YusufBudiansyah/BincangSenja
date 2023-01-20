@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Order List</title>
+         <link rel="stylesheet" href="CSS/OWNCSS.css"/>
+         <link rel="stylesheet" href="CSS/dash.css"/>
+        <link rel="stylesheet" href="CSS/styles.css"/>
+ <link rel="icon" type="image/png" href="img/bincang senja.png" />
+       
+                
+         
+    </h:head>
+    <h:body>
+        <div class="main1">
+            <div class="navbar">
+               <label class="logo">BincangSenja</label>
+                <ul>
+                     <li><a href="order.xhtml">Order</a></li>
+                    <li><a href="index.xhtml" class="aktif2">Back</a></li>
+                
+                </ul>
+            </div> 
+               
+
+                    <div class="container-login">
+
+        </div>
+                      <h:form>
+                      
+       
+                            
+                          <h:dataTable border="1" value="#{tblOrder.getAllRecords()}" var="order"
+                                   styleClass="teacher-table"
+                                   headerClass="teacher-table-header"
+                                   rowClasses="teacher-table-odd-row,teacher-table-even-row">
+                                 <h:column >
+                                    <f:facet name="header"> No Order</f:facet>
+                                   #{order.noOrder}
+                                    
+                                </h:column>
+                                <h:column>
+                                    <f:facet name="header"> Nama Menu</f:facet>
+                                    #{order.namaMenu}
+                                    
+                                </h:column>
+                                <h:column>
+                                    <f:facet name="header"> Jumlah Order</f:facet>
+                                    #{order.jumlahOrder}
+                                    
+                                </h:column>
+                                <h:column>
+                                    <f:facet name="header"> Harga </f:facet>
+                                    #{order.harga}
+                                    
+                                </h:column>
+                                <h:column>
+                                    <f:facet name="header"> Total </f:facet>
+                                  #{order.total}
+                                </h:column>
+                                
+                            </h:dataTable>
+          
+           
+          </h:form>     
+      </div>
+       
+        
+    </h:body>
+</html>
+

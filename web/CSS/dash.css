@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+body{
+    font-family: 'Poppins', serif;
+}
+
+
+
+#sidebar-wrapper .sidebar-nav{
+    list-style-type:none;
+}
+
+#sidebar-wrapper .sidebar-nav li{
+    margin-top: 22px ;
+}
+
+#sidebar-wrapper img{
+    width: 20px;
+    margin-right: 6px
+}
+
+.none{
+    text-decoration: none;
+    color: #D8D8D8;
+    font-size: 13px;
+    
+}
+
+.none2{
+    text-decoration: none;
+    color: #ffbe76;
+    font-size: 14px;
+}
+
+.buttondas{
+    background-color: white;
+    color: black;
+    margin: 8px 4px 25px 25px;
+    border: none;
+    cursor: pointer;
+    width: 225px;
+    height: 150px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    
+        
+}
+
+.buttondas:hover{
+color: #404040 !important;
+font-weight: 700 !important;
+letter-spacing: 3px;
+background: none;
+-webkit-box-shadow: 0px 5px 40px -10px rgba(117, 131, 142, 0.04), 0px 16px 24px rgba(52, 60, 68, 0.12);
+-moz-box-shadow: 0px 5px 40px -10px rgba(117, 131, 142, 0.04), 0px 16px 24px rgba(52, 60, 68, 0.12);
+transition: all 0.3s ease 0s;
+}
+
+.gambar img{
+    width: 90px;
+    margin-left: 40px;
+}
+
+
+.kotakotak{
+    padding: 18px;
+    margin: 16px;
+    background: #FEFEFE;
+    box-shadow: 0px 1px 4px rgba(52, 60, 68, 0.1);
+    border-radius: 8px;
+}
+
+.form-control{
+    width: 10%;
+}
+
+
+.admin-table{   
+	border-collapse:collapse;
+        font-size: 14px;
+}
+
+.admin-table-header{
+	text-align:center;
+	background:none repeat scroll 0 0 #A2C4C9;
+	padding:8px;
+        width: 400px;
+        font-size: 14px;
+        color: White;
+}
+
+.admin-table-odd-row{
+	text-align:center;
+	background:none repeat scroll 0 0 #FBFBFB;
+/*	border-top:1px solid #BBBBBB;*/
+}
+
+.admin-table-even-row{
+	text-align:center;
+	background:none repeat scroll 0 0 #FBFBFB;
+/*	border-top:1px solid #BBBBBB;*/
+}
+
+
+.teacher-table{   
+	border-collapse:collapse;
+        font-size: 14px;
+}
+
+.teacher-table-header{
+	text-align:center;
+	background:none repeat scroll 0 0 #5882a0;
+	padding:8px;
+        width: 300px;
+        font-size: 14px;
+        color: White;
+}
+
+.teacher-table-odd-row{
+	text-align:center;
+	background:none repeat scroll 0 0 #FBFBFB;
+/*	border-top:1px solid #BBBBBB;*/
+}
+
+.teacher-table-even-row{
+	text-align:center;
+	background:none repeat scroll 0 0 #FBFBFB;
+/*	border-top:1px solid #BBBBBB;*/
+}
+
+
+
+.student-table{   
+	border-collapse:collapse;
+        font-size: 14px;
+}
+
+.student-table-header{
+	text-align:center;
+	background:none repeat scroll 0 0 #A289b4;
+	padding:8px;
+        width: 300px;
+        font-size: 14px;
+        color: White;
+}
+
+.student-table-odd-row{
+	text-align:center;
+	background:none repeat scroll 0 0 #FBFBFB;
+/*	border-top:1px solid #BBBBBB;*/
+}
+
+.student-table-even-row{
+	text-align:center;
+	background:none repeat scroll 0 0 #FBFBFB;
+/*	border-top:1px solid #BBBBBB;*/
+}

@@ -1,0 +1,185 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
+     xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+    <h:head>
+        <title>Order here</title>
+         <link rel="stylesheet" href="CSS/OWNCSS.css"/>
+         <link rel="stylesheet" href="CSS/dash.css"/>
+        <link rel="stylesheet" href="CSS/styles.css"/>
+        <link rel="icon" type="image/png" href="img/bincang senja.png" />
+        <link   
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+            crossorigin="anonymous"/>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
+         
+    </h:head>
+    <h:body>
+        <div class="main">
+            <div class="navbar">
+                
+               <label class="logo">BincangSenja</label>
+                
+            </div> 
+             
+             
+            <div class="content">
+
+                    <div class="container-login">
+
+        </div>
+        
+        <section class="h-100">
+            <div class="container h-100">
+                <div class="row justify-content-sm-center h-100">
+                    <div class="col-xxl-4 col-xl-5 col-lg-5 col-md-7 col-sm-9">
+                        <div class="text-center my-10 mb-4">
+                            
+                        <div class="w3-panel w3-card-4 m-5 my-5">
+                            <div class="card-body p-10 pb-0 mb-0">
+                                <h1 class="fs-4 card-title fw-bold mb-4 mt-0 text-light">ORDER LIST</h1>
+                                <h:form
+                                    class="needs-validation"
+                                    p:novalidate="true"
+                                    p:autocomplete="on"
+                                >
+                                    
+                          
+                                    
+                                      <h:outputLabel class="mb-1 text-light"  value="No Order"/>
+                                     <div class="kotakotak1">  
+                            <div class="input-group mb-1"  >
+                                <h:inputText a:placeholder="No Order *Auto*" style="border-radius: 1px;" class="form-control" value="#{tblOrder.noOrder}"/>
+                                    </div>
+                             </div>
+                             
+                                      <h:outputLabel class="mb-1 text-light"  value="Nama Order"/>
+                             <div class="kotakotak1">  
+                             <div style="margin-right: 35px">
+                                 
+                                    
+                                               <h:selectOneMenu id="gender"  style="width: 265px" class="form-control" value="#{tblOrder.namaMenu}"> 
+                                   <f:selectItem itemValue="Bincang Kopi Original"
+                                              itemLabel="*Bincang Kopi Original*"/>
+                                   <f:selectItem itemValue="Senkopsu"
+                                       itemLabel="Senkopsu"/>
+                                   <f:selectItem itemValue="Sencoko"
+                                       itemLabel="*Sencoko*"/>
+                                   <f:selectItem itemValue="Senmatsu"
+                                       itemLabel="Senmatsu"/>
+                                   <f:selectItem itemValue="Sentesu"
+                                       itemLabel="Sentesu"/>
+                                   <f:selectItem itemValue="Cireng Senja"
+                                       itemLabel="*Cireng Senja*"/>
+                                   <f:selectItem itemValue="Croissant"
+                                       itemLabel="Croissant"/>
+                                   <f:selectItem itemValue="Kentang Senja"
+                                       itemLabel="Kentang Senja"/>
+                                   <f:selectItem itemValue="Burger Senja"
+                                       itemLabel="Burger Senja"/>
+                                   <f:selectItem itemValue="Senvasu"
+                                       itemLabel="Senvasu"/>
+                                     
+                                   </h:selectOneMenu> <br/><br/>
+                                </div>
+                                  </div>
+                                    
+                                 <h:outputLabel class="mb-1 text-light" value="Jumlah Order"/>   
+                            <div class="kotakotak1">  
+                            <div class="input-group mb-1"  >
+                                <h:inputText p:type="number"  a:placeholder="Jumlah Order" readonly="" style="border-radius: 1px;" class="form-control" value="#{tblOrder.jumlahOrder}"/>
+                                    </div>
+                             </div>
+                                  
+                                 <h:outputLabel class="mb-1 text-light"  value="Harga"/>
+                            <div class="kotakotak1">  
+
+                            <div class="input-group mb-1"  >
+                                <h:inputText a:placeholder="Harga *Don't Field*" readonly="" style="border-radius: 1px;" class="form-control" value="#{tblOrder.harga}"/>
+                                    </div>
+                             </div>
+                                    
+                                 <h:outputLabel  class="mb-1 text-light"  value="Total "/>
+                            <div class="kotakotak1">  
+
+                            <div class="input-group mb-1"  >
+                                <h:inputText a:placeholder="Total *Don't Field*" disabled="" readonly="" style="border-radius: 1px;" class="form-control" value="#{tblOrder.total}"/>
+                                    </div>
+                             </div>
+                               
+                              <div class="align-items-center mb-1 d-flex">
+                                        <h:commandButton
+                                            action="#{tblOrder.save_order()}"
+                                            type="submit"
+                                            class="
+                                            btn btn-outline-danger
+                                            ms-auto
+                                            w-100
+                                            mt-2
+                                            button-blue
+                                            
+                                            "
+                                            onclick="alert('Order Confirm')"
+                                            value="ORDER"
+                                        />
+           
+                                    </div>
+                                 <hr/>
+                                 
+                                  <div class="align-items-center mb-1 d-flex">
+                                        <h:commandButton
+                                            action="index.xhtml"
+                                            type="submit"
+                                            class="
+                                            btn btn-outline-warning
+                                            ms-auto
+                                            w-100
+                                            mt-1
+                                            button-blue
+                                            
+                                            "
+                                            value="BACK"
+                                        />
+           
+                                    </div>
+                                 
+                                  <div class="align-items-center mb-1 d-flex">
+                                        <h:commandButton
+                                            action="orderlist.xhtml"
+                                            type="submit"
+                                            class="
+                                            btn btn-outline-warning
+                                            ms-auto
+                                            w-100
+                                            mt-3
+                                            button-blue
+                                            
+                                            "
+                                            value="SEE ORDER LIST"
+                                        />
+           
+                                    </div>
+                                 <br/>
+
+
+                                </h:form>
+                            </div>
+                          
+                        </div>
+                            
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>   
+            </div> 
+        </div> 
+               
+    </h:body>
+</html>
+

@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+body{
+     font-family: 'Poppins', serif;
+     background-image:url("backg.jpg") ;
+}
+
+.background{
+    background-color: #Ffffff;
+}
+
+.input_text[type=text],input[type=password]
+    {
+        width: 70%;
+        padding: 13px 18px;
+        margin: 5px 0px;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+    }
+    
+.input_text2[type=text]
+    {
+        width: 25%;
+        padding: 13px 18px;
+        margin: 5px 0px;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 8px
+    }
+    
+.manipulate[type=text]
+    {
+        width: 23%;
+        padding: 10px 18px;
+        margin: 5px 0px;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 40px
+    }
+
+.manipulatekhus[type=text]
+    {
+        width: 15%;
+        padding: 10px 18px;
+        margin: 5px 0px;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 40px
+    }
+            
+.button_log
+    {
+        background-color: #006A77;
+        color: white;
+        padding: 13px 18px;
+        margin: 4px 0;
+        border: none;
+        cursor: pointer;
+        width: 70%;
+        border-radius: 8px
+    }
+    
+.button_log2
+    {
+        background-color: blue;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 50%;
+        border-radius: 40px
+    }
+
+.buttonkecil
+    {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 18px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 8%;
+        border-radius: 40px
+    }
+
+.buttonmanipulate
+    {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 18px;
+        margin: 4px 0;
+        border: none;
+        cursor: pointer;
+        width: 8%;
+        border-radius: 20px;
+        margin-top: 12px;
+    }
+    
+.model-content
+    {
+        background-color: #fefefe;
+        margin: 5% auto 5% auto;
+/*        border: 1px solid #888;*/
+        width: 40%;
+        text-align: center;   
+        border-radius: 16px;
+    }
+
+

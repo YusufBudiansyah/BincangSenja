@@ -1,0 +1,174 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
+    <h:head>
+        <title>Admin Page</title>
+          <link rel="stylesheet" href="CSS/OWNCSS.css"/>
+         <link rel="stylesheet" href="CSS/dash.css"/>
+        <link rel="stylesheet" href="CSS/styles.css"/>
+        <link rel="icon" type="image/png" href="img/bincang senja.png" />
+           <link   
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+            crossorigin="anonymous"/>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+            crossorigin="anonymous"
+        ></script>
+                
+         
+    </h:head>
+    <h:body>
+        <div class="main1">
+            <br/>
+            <div class="navbar">
+               <label class="logo">BincangSenja</label>
+                <ul>
+                   
+                    <li><a href="login.xhtml" class="aktif2">Log Out</a></li>
+                
+               
+                </ul>
+            </div> 
+               
+
+                    <div class="container-login">
+                           
+                     
+        </div>
+            <br/><br/>
+                      <h:form class="needs-validation" p:novalidate="true">
+               <h:commandButton style="border-radius: 3px; margin-left: 10px" class="btn btn-outline-warning"  value="Add" action="#{tblOrder.save_order()}"/>&nbsp;
+               <h:commandButton style="border-radius: 3px; margin-left: 10px" class="btn btn-outline-warning" value="Edit" action="#{tblOrder.editorder()}"/>&nbsp;
+               <h:commandButton style="border-radius: 3px; margin-left: 10px" class="btn btn-outline-warning" value="delete" action="#{tblOrder.deleteorder()}"/>&nbsp;
+               <h:commandButton style="border-radius: 3px; margin-left: 10px" class="btn btn-outline-danger" value="Reset" action="#{tblOrder.resetorder()}"/>
+                
+                <hr/>
+                
+            
+                           <div class="kotakotak">  
+                          
+                               
+                            <div class="input-group">       
+                                <div style="margin-right: 70px">
+                                   <h6 style="font-size: 17px; font-style: inherit">No Order</h6>
+                                   
+                                   <h:inputText  p:required="true" p:type="number" style="width: 212px" class="form-control input-focus" id="noOrder"  value="#{tblOrder.noOrder}" autocomplete="off"/> <br/> 
+                                    <div class="invalid-feedback">
+                                    Please enter No Order
+                                </div>
+
+                                   <h:commandButton style="border-radius: 3px; margin-left: 10px" class="btn btn-primary" value="Search" action="#{tblOrder.getByIdOrder()}"/><br/>
+                               </div>
+                                 
+                                <div style="margin-right: 70px">
+                                    <h6 style="font-size: 17px; font-style: inherit">Nama menu</h6>
+                                    <h:inputText style="width: 212px" class="form-control" value="#{tblOrder.namaMenu}"/><br/> 
+                                         <div class="invalid-feedback">
+                                    Please enter No Order
+                                </div>
+                                  
+                                </div>
+                                
+                                <div style="margin-right: 70px">
+                                    <h6 style="font-size: 17px; font-style: inherit">Jumlah Order</h6>
+                                    <h:inputText p:type="number" style="width: 212px" class="form-control" value="#{tblOrder.jumlahOrder}" /><br/> 
+                                         <div class="invalid-feedback">
+                                    Please enter No Order
+                                </div>
+
+                                </div>
+                                
+                               <div style="margin-right: 70px">
+                                    <h6 style="font-size: 17px; font-style: inherit">Harga</h6>
+                                    <h:inputText style="width: 215px" class="form-control" value="#{tblOrder.harga}"/><br/> 
+                                         <div class="invalid-feedback">
+                                    Please enter No Order
+                                </div>
+                                  
+                                </div>
+                                
+                              <div style="margin-right: 70px">
+                                    <h6 style="font-size: 17px; font-style: inherit">Total</h6>
+                                    <h:inputText style="width: 215px" class="form-control" value="#{tblOrder.total}"/><br/>
+                                         <div class="invalid-feedback">
+                                    Please enter No Order
+                                </div>
+                                   
+                                </div>
+                            </div>    
+                        </div>
+  
+          
+                  
+                
+       <div class="kotakotak">  
+                            
+                          <h:dataTable border="1" value="#{tblOrder.getAllRecords()}" var="order"
+                                   styleClass="teacher-table"
+                                   headerClass="teacher-table-header"
+                                   rowClasses="teacher-table-odd-row,teacher-table-even-row">
+                                 <h:column >
+                                    <f:facet name="header"> No Order</f:facet>
+                                   #{order.noOrder}
+                                    
+                                </h:column>
+                                <h:column>
+                                    <f:facet name="header"> Nama Menu</f:facet>
+                                    #{order.namaMenu}
+                                    
+                                </h:column>
+                                <h:column>
+                                    <f:facet name="header"> Jumlah Order</f:facet>
+                                    #{order.jumlahOrder}
+                                    
+                                </h:column>
+                                <h:column>
+                                    <f:facet name="header"> Harga </f:facet>
+                                    #{order.harga}
+                                    
+                                </h:column>
+                                <h:column>
+                                    <f:facet name="header"> Total </f:facet>
+                                  #{order.total}
+                                </h:column>
+                               
+                                
+                              
+                            </h:dataTable>
+                   </div>            
+           
+          </h:form>  
+          <hr/>
+      </div>
+       <script>
+            // Example starter JavaScript for disabling form submissions if there are invalid fields
+            (function () {
+                'use strict'
+
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                var forms = document.querySelectorAll('.needs-validation')
+
+                // Loop over them and prevent submission
+                Array.prototype.slice.call(forms)
+                    .forEach(function (form) {
+                        form.addEventListener('submit', function (event) {
+                            if (!form.checkValidity()) {
+                                event.preventDefault()
+                                event.stopPropagation()
+                            }
+
+                            form.classList.add('was-validated')
+                        }, false)
+                   })
+            })()
+        </script>
+    </h:body>
+</html>
+
